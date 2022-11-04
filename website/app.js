@@ -117,7 +117,7 @@ const projectData = [
       'questions, answers and use the search functionality, but when they are logged in they can now post a question or answer a question ' +
       'already posted. Created using the ASP.NET Core framework for the backend, coded in C#, to interact with a database in SQL Server. ' +
       'The frontend was built with React, using Redux for state management, and coded with Typescript.',
-    projGitHub: 'https://github.com/tajunk/React-C.NET-Project',
+    projGitHub: '',
     projVideo: 'qareact-project.mp4',
     projSkill1: 'React',
     projSkill2: 'Typescript',
@@ -134,7 +134,7 @@ const projectData = [
       'creating profiles as well as saving laps to a unique session created by the user all saved locally. The idea with this ' +
       'project was to expand on a simple timer app and give it more functionality with profiles, automatic laps, calorie burning calculations, ' +
       'and session tracking.',
-    projGitHub: 'https://github.com/tajunk/Fitness-App--Android-',
+    projGitHub: '',
     projVideo: 'android-project.mp4',
     projSkill1: 'Java',
     projSkill2: 'SQLite',
@@ -149,7 +149,7 @@ const projectData = [
       'possible, going upwards with platforms being generated off screen infinitely, until they inevitably fall off screen in which they will be presented with ' +
       'a "Game Over" screen, their score total and a prompt to play again.' +
       '   Check it out at https://infinite-jumping-game.netlify.app/ ',
-    projGitHub: 'https://github.com/tajunk/Jump-Game--Phaser3-Javascript-',
+    projGitHub: '',
     projVideo: 'jsgame-project.mp4',
     projSkill1: 'Javascript',
     projSkill2: 'HTML5',

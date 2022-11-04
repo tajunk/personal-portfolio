@@ -338,8 +338,11 @@ li {
   }
   .text-box {
   padding-bottom: 10px;
-  width: 1000px;
-  margin: 0 auto;
+  margin-left: 260px;
+  margin-right: 260px
+  
+  /* width: 1000px;
+  margin: 0 auto; */
 }
   .section-center {
     width: 95vw;
