@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Personal Portfolio page for Taylor Awde. Developer located in Edmonton with skills in React, Javascript, C# and more."
+    />
+    <title>Taylor Awde's Portfoloio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.png" />
+  </head>
+  <body>
+    <header id="home">
+      <nav id="nav" class="reg-nav">
+        <div class="nav-center">
+          <div class="nav-header">
+            <a href="#"
+              ><img
+                src="./logowhite.png"
+                alt="TaylorAwde"
+                class="logo animated-fadein"
+                id="logoImg"
+            /></a>
+            <button class="nav-toggle">
+              <i class="fas fa-bars white" id="menuBars"></i>
+            </button>
+          </div>
+          <div class="links-container">
+            <ul class="links">
+              <li>
+                <a href="#home" class="scroll-link">home</a>
+              </li>
+              <li>
+                <a href="#projects" class="scroll-link">projects</a>
+              </li>
+              <li>
+                <a href="#about" class="scroll-link">about</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="banner">
+        <div class="container">
+          <h1 class="animated-left">Welcome to my Portfolio</h1>
+          <p class="animated-right">
+            View some of my projects and learn more about me below
+          </p>
+          <a
+            href="#projects"
+            class="scroll-link btn-new btn-new-white animated-up"
+          >
+            Explore projects
+          </a>
+        </div>
+      </div>
+    </header>
+    <section id="projects" class="section">
+      <div class="title">
+        <h2 class="animated-left">My <span>Projects</span></h2>
+        <div style="display: flex; justify-content: center">
+          <!-- NEW -->
+          <div class="dropdown">
+            <button class="dropbtn">
+              Projects
+            </button>
+            <div class="dropdown-content">
+              <a href="" onclick="return false;" class="drop-pick" id="0">Q & A App</a>
+              <a href="" onclick="return false;" class="drop-pick" id="1">Fit Tracker</a>
+              <a href="" onclick="return false;" class="drop-pick" id="2">Infinite Jump</a>
+            </div>
+          </div>
+          <!-- NEW -->
+          <button class="prev-btn btn-new btn-new-white">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <h3 id="proj-Title" class="projTitle">
+            <!-- Dynamically added with JS -->
+          </h3>
+          <button class="next-btn btn-new btn-new-white">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+      <div class="project-center section-center">
+        <article class="project-img">
+          <video id="proj-Video" autoplay loop muted>
+            <!-- Dynamically added with JS -->
+            <source src="" type="video/mp4" />
+          </video>
+        </article>
+        <article class="project">
+          <!-- btn container -->
+          <div class="btn-container">
+            <button class="tab-btn active" data-id="overview">Overview</button>
+            <button class="tab-btn" data-id="skills">Built With</button>
+            <button class="tab-btn" data-id="github">GitHub</button>
+          </div>
+          <article class="project-content">
+            <!-- single item -->
+            <div class="content active" id="overview">
+              <p id="proj-Description">
+                <!-- Dynamically added with JS -->
+              </p>
+              <a
+                href="https://infinite-jumping-game.netlify.app/"
+                class="hide-btn btn-new-white play-btn"
+                >Play it!</a
+              >
+            </div>
+            <!-- end of single item -->
+            <!-- single item -->
+            <div class="content" id="skills">
+              <h4 class="title">Built With</h4>
+              <ul>
+                <li id="proj-Skill1"><!-- Dynamically added with JS --></li>
+                <li id="proj-Skill2"><!-- Dynamically added with JS --></li>
+                <li id="proj-Skill3"><!-- Dynamically added with JS --></li>
+                <li id="proj-Skill4"><!-- Dynamically added with JS --></li>
+                <li id="proj-Skill5"><!-- Dynamically added with JS --></li>
+                <li id="proj-Skill6"><!-- Dynamically added with JS --></li>
+              </ul>
+            </div>
+            <!-- end of single item -->
+            <!-- single item -->
+            <div class="content" id="github">
+              <div class="title">
+                <!-- Dynamically added with JS -->
+                <a
+                  id="proj-GitHub"
+                  href=""
+                  class="btn-new btn-new-white scnBtn"
+                >
+                  View on GitHub
+                </a>
+              </div>
+            </div>
+            <!-- end of single item -->
+          </article>
+        </article>
+      </div>
+    </section>
+    <section id="about" class="section">
+      <div class="title">
+        <h2 class="animated-right-delay">About <span>Taylor</span></h2>
+        <article class="personal-img">
+          <img src="profilepic.png" alt="Taylor" class="animated-up-delay" />
+        </article>
+        <div class="text-box">
+          <p>
+            I'm a developer from Edmonton in Alberta, Canada. I have a 
+            Digital Media and IT diploma, under the Computer Software
+            Development Concentration, from NAIT in Edmonton. I have
+            experience with React, Javascript, C#, SQL, Java, HTML / CSS,
+            Shopify Liquid and other various related tools. On a personal note,
+            I'm an avid weight lifter who also enjoys music, rock climbing and
+            gaming.
+          </p>
+        </div>
+        <div>
+          <a
+            href="mailto:taylorawde@gmail.com"
+            class="btn-width btn-new btn-new-white"
+          >
+            Contact Me
+          </a>
+        </div>
+        <div style="padding: 18px"></div>
+      </div>
+    </section>
+    <footer class="section">
+      <img src="favicon.png" alt="logo" class="logo-f align" />
+      <div style="text-align: center" class="smSpace align">
+        <a href="https://www.linkedin.com/in/taylor-awde/"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="https://www.facebook.com/taylor.awde"
+          ><i class="fab fa-facebook-square"></i
+        ></a>
+        <a href="https://www.instagram.com/taylorawde/"
+          ><i class="fab fa-instagram"></i
+        ></a>
+      </div>
+      <p>portfolio created &copy; Taylor Awde <span id="date"></span>.</p>
+    </footer>
+    <a href="#home" class="scroll-link top-link">
+      <i class="fas fa-angle-double-up"></i>
+    </a>
+    <script src="app.js"></script>
+  </body>
+</html>
