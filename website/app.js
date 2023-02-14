@@ -33,12 +33,12 @@ window.addEventListener('scroll', function () {
     navbar.classList.add('fixed-nav');
     navbar.classList.remove('reg-nav');
     menuBars.classList.remove('white');
-    logo.src = 'logo.png';
+    logo.src = "/logos/logogrey.png";
   } else {
     navbar.classList.remove('fixed-nav');
     navbar.classList.add('reg-nav');
     menuBars.classList.add('white');
-    logo.src = 'logowhite.png';
+    logo.src = "/logos/logowhite.png";
   }
   // Back to top button
   if (scrollHeight > 500) {
@@ -83,135 +83,157 @@ scrollLinks.forEach(function (link) {
 
 // Project Section
 
-const btns = document.querySelectorAll('.tab-btn');
-const project = document.querySelector('.project');
-const articles = document.querySelectorAll('.content');
+// const btns = document.querySelectorAll('.tab-btn');
+// const project = document.querySelector('.project');
+// const articles = document.querySelectorAll('.content');
 
-project.addEventListener('click', function (e) {
-  const id = e.target.dataset.id;
-  if (id) {
-    // Remove active from other buttons
-    btns.forEach(function (btn) {
-      btn.classList.remove('active');
-      e.target.classList.add('active');
-    });
-    // Hide other articles
-    articles.forEach(function (article) {
-      article.classList.remove('active');
-    });
+// project.addEventListener('click', function (e) {
+//   const id = e.target.dataset.id;
+//   if (id) {
+//     // Remove active from other buttons
+//     btns.forEach(function (btn) {
+//       btn.classList.remove('active');
+//       e.target.classList.add('active');
+//     });
+//     // Hide other articles
+//     articles.forEach(function (article) {
+//       article.classList.remove('active');
+//     });
 
-    const element = document.getElementById(id);
-    element.classList.add('active');
-  }
-});
+//     const element = document.getElementById(id);
+//     element.classList.add('active');
+//   }
+// });
 
-const projectData = [
+const codeProject = [
   {
     id: 1,
-    projTitle: 'Q & A Web App',
-    projDescription:
-      'This project is a web app developed in React. The goal with this project was to create a ' +
-      'mini forum like question and answer environment where multiple users could be logging in both posting ' +
-      'and answering questions. Security functionality was implemented using Auth0, accounts for the web app are created through the Auth0 login service ' +
-      'and are required to access the additional functionality of the web app. Before logging in a user can only view answered / unanswered ' +
-      'questions, answers and use the search functionality, but when they are logged in they can now post a question or answer a question ' +
-      'already posted. Created using the ASP.NET Core framework for the backend, coded in C#, to interact with a database in SQL Server. ' +
-      'The frontend was built with React, using Redux for state management, and coded with Typescript.',
-    projGitHub: '',
-    projVideo: 'qareact-project.mp4',
-    projSkill1: 'React',
-    projSkill2: 'Typescript',
-    projSkill3: 'C#',
-    projSkill4: '.NET Core',
-    projSkill5: 'SQL Server',
-    projSkill6: 'Auth0',
+    projTitle: "React / .NET Web App",
+    projText:
+      "Full stack web application created with a React based front end that serves C# code on a .NET framework back end with a MSQL Server database. Simple application that serves as a forum or bulletin board that multiple users can access and view, create and answer questions posed by themselves and/or others. Some functionality is only available when logged in, authentication is handled with a service called Auth0, and data is updated dynamically as it is added and stored live. Hosting is down as of 01/2023, likely will rebuild on something other than Azure.",
+    projLink: "",
+    projVideo: "/videos/qareact-project.mp4",
+    projIcon1: "icons/react.svg",
+    projIcon2: "icons/microsoft-dotnet.svg",
+    projIcon3: "icons/sql.svg",
   },
   {
     id: 2,
-    projTitle: 'Fit Tracker',
-    projDescription:
-      'Created in Android Studio with the Java programming language. SQLite was used to handle ' +
-      'creating profiles as well as saving laps to a unique session created by the user all saved locally. The idea with this ' +
-      'project was to expand on a simple timer app and give it more functionality with profiles, automatic laps, calorie burning calculations, ' +
-      'and session tracking.',
-    projGitHub: '',
-    projVideo: 'android-project.mp4',
-    projSkill1: 'Java',
-    projSkill2: 'SQLite',
-    projSkill3: 'Android Studio',
+    projTitle: "Android / Java Mobile App",
+    projText:
+      "Android mobile application written in Java code with SQLite used to handle database duties. Timer / Lap tracking app with added functionality like profiles to track progress between sessions, automatic or manual lap tracking, estimating calories burned and session statistic tracking.",
+    projLink: "",
+    projVideo: "/videos/android-project.mp4",
+    projIcon1: "icons/java.svg",
+    projIcon2: "icons/android.svg",
+    projIcon3: "icons/sqlite.svg",
   },
   {
     id: 3,
-    projTitle: 'Infinite Jump',
-    projDescription:
-      'A simple game that runs in a web browser developed in Javascript using Phaser3 which is a HTML5 framework that allows WebGL rendering in browsers. ' +
-      'The goal with this project was to try something new while expanding on my Javascript knowledge. Users control the rabbit to collect as many carrots as ' +
-      'possible, going upwards with platforms being generated off screen infinitely, until they inevitably fall off screen in which they will be presented with ' +
-      'a "Game Over" screen, their score total and a prompt to play again.' +
-      '   Check it out at https://infinite-jumping-game.netlify.app/ ',
-    projGitHub: '',
-    projVideo: 'jsgame-project.mp4',
-    projSkill1: 'Javascript',
-    projSkill2: 'HTML5',
-    projSkill3: 'Phaser3',
+    projTitle: "Javascript / HTML Browser Game",
+    projText:
+      "Small proof of concept game developed using just Javascript code with a HTML5 framework called Phaser. Most concepts with this project are very Phaser specific but presented a fun alternative to typical useages with Javascipt. The game itself is a typical 'endless' jump type game where carrots and platforms will continue to generate above the character as they jump and the goal is to get a high score without falling off the screen or a game over will be presented and the user is prompted to restart. ",
+    projLink: "https://infinite-jumping-game.netlify.app/",
+    projVideo: "/videos/jsgame-project.mp4",
+    projIcon1: "icons/javascript.svg",
+    projIcon2: "icons/html5.svg",
+    projIcon3: "icons/phaser.png",
   },
 ];
 
-const video = document.getElementById('proj-Video');
-const title = document.getElementById('proj-Title');
-const desc = document.getElementById('proj-Description');
-const gitHub = document.getElementById('proj-GitHub');
-const skill1 = document.getElementById('proj-Skill1');
-const skill2 = document.getElementById('proj-Skill2');
-const skill3 = document.getElementById('proj-Skill3');
-const skill4 = document.getElementById('proj-Skill4');
-const skill5 = document.getElementById('proj-Skill5');
-const skill6 = document.getElementById('proj-Skill6');
+const webProject = [
+  {
+    id: 1,
+    projTitle: "Salon Boutique WordPress Website",
+    projText:
+      "Proof of concept WordPress website not attached to any real world business but done for experimentation and learning purposes. Implementing certain business needs, like a scheduling system in the case of this project, are made simple when compared to creating a project from scratch.",
+    projLink: "http://taylora15.sg-host.com/",
+    projVideo: "/videos/salon-project.mp4",
+    projIcon1: "icons/wordpress.svg",
+    projIcon2: "icons/html5.svg",
+    projIcon3: "icons/css3.svg",
+  },
+  {
+    id: 2,
+    projTitle: "Industrial Sales WordPress Website",
+    projText:
+      "Proof of concept WordPress website not attached to any real world business but done for experimentation and learning purposes. Implementing certain business needs, like inventory and shop in the case of this project, are made simple when compared to creating a project from scratch.",
+    projLink: "http://taylora16.sg-host.com/",
+    projVideo: "/videos/industry-project.mp4",
+    projIcon1: "icons/wordpress.svg",
+    projIcon2: "icons/html5.svg",
+    projIcon3: "icons/css3.svg",
+  },
+  {
+    id: 3,
+    projTitle: "Portfolio Custom Javascript Website",
+    projText:
+      "This website! The video shows an old version of the site, this portfolio has served as a fun project to revisit as I learn new things or look to experiment over time. The site itself is created from scratch and uses just HTML, 800 plus lines of CSS and Javascript code to achieve all the functionality. A few noteables that this includes are the dynamic scrolling (after calculating screen position) from the NAV, the fixed NAV based on screen position, and querying for each of my projects from their objects then dynamically displaying them in the HTML with a function based on a selection.",
+    projLink: "",
+    projVideo: "/videos/portfolio-project.mp4",
+    projIcon1: "icons/javascript.svg",
+    projIcon2: "icons/html5.svg",
+    projIcon3: "icons/css3.svg",
+  },
+];
 
-const prevBtn = document.querySelector('.prev-btn');
-const nextBtn = document.querySelector('.next-btn');
+const title = document.getElementById('proj-Title');
+const text = document.getElementById('proj-Text');
+const link = document.getElementById('proj-Link');
+const video = document.getElementById('proj-Video');
+const icon1 = document.getElementById('proj-Icon1');
+const icon2 = document.getElementById('proj-Icon2');
+const icon3 = document.getElementById('proj-Icon3');
+
+const codeClick = document.querySelector('#code-pick');
+const webClick = document.querySelector("#web-pick");
 
 let currentItem = 0;
 
-window.addEventListener('DOMContentLoaded', function () {
-  showProject(currentItem);
-});
-
-//Show project based on current item
-function showProject(project) {
-  const item = projectData[project];
-  video.src = item.projVideo;
+function showWeb(project) {
+  const item = webProject[project];
   title.textContent = item.projTitle;
-  desc.textContent = item.projDescription;
-  gitHub.href = item.projGitHub;
-  skill1.textContent = item.projSkill1;
-  skill2.textContent = item.projSkill2;
-  skill3.textContent = item.projSkill3;
-  skill4.textContent = item.projSkill4;
-  skill5.textContent = item.projSkill5;
-  skill6.textContent = item.projSkill6;
+  text.textContent = item.projText;
+  if (project == 2) {
+    link.classList.add("hidden");
+  } else if (project == 0 || project == 1) {
+    link.classList.remove("hidden");
+  }
+  link.href = item.projLink;
+  video.src = item.projVideo;
+  icon1.src = item.projIcon1;
+  icon2.src = item.projIcon2;
+  icon3.src = item.projIcon3;
 }
 
-// Show next project
-nextBtn.addEventListener('click', function () {
-  currentItem++;
-  if (currentItem > projectData.length - 1) {
-    currentItem = 0;
+function showCode(project) {
+  const item = codeProject[project];
+  title.textContent = item.projTitle;
+  text.textContent = item.projText;
+  if (project == 0 || project == 1) {
+    link.classList.add("hidden");
+  } else if (project == 2) {
+    link.classList.remove("hidden");
   }
-  showProject(currentItem);
-});
-// Show previous project
-prevBtn.addEventListener('click', function () {
-  currentItem--;
-  if (currentItem < 0) {
-    currentItem = projectData.length - 1;
-  }
-  showProject(currentItem);
+  link.href = item.projLink;
+  video.src = item.projVideo;
+  icon1.src = item.projIcon1;
+  icon2.src = item.projIcon2;
+  icon3.src = item.projIcon3;
+}
+
+// Default Project 
+window.addEventListener('DOMContentLoaded', function () {
+  showCode(currentItem);
 });
 
-const dB = document.querySelector(".dropdown-content");
-
-dB.addEventListener('click', (e) => {
-  let id = e.target.id;
-  showProject(id);
+codeClick.addEventListener('click', function (e) {
+  console.log(e.target.id);
+  showCode(e.target.id);
 });
+
+webClick.addEventListener("click", function (e) {
+  console.log(e.target.id);
+  showWeb(e.target.id);
+});
+

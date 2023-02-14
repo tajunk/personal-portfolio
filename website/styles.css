@@ -3,7 +3,7 @@
 Fonts
 ===============
 */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
 
 /*
 =============== 
@@ -45,8 +45,8 @@ Variables
   --clr-secondary: rgb(83, 171, 223);
   --clr-footer: rgb(33, 41, 46);
   --clr-black: #222;
-  --ff-primary: 'Roboto', sans-serif;
-  --ff-secondary: 'Open Sans', sans-serif;
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
   --transition: all 0.3s linear;
   --spacing: 0.25rem;
   --radius: 0.5rem;
@@ -87,7 +87,7 @@ ul {
 a {
   text-decoration: none;
 }
-img:not(.logo, .logo-f) {
+img:not(.logo, .logo-f, .tech-icon) {
   width: 100%;
 }
 img {
@@ -98,7 +98,6 @@ h1,
 h2,
 h3,
 h4 {
-  letter-spacing: var(--spacing);
   text-transform: capitalize;
   line-height: 1.25;
   margin-bottom: 0.75rem;
@@ -122,8 +121,9 @@ p {
 }
 @media screen and (min-width: 800px) {
   h1 {
-    font-size: 3.2rem;
+    font-size: 8rem;
     padding: 20px;
+    font-weight: bold;
   }
   h2 {
     font-size: 2.5rem;
@@ -238,7 +238,7 @@ li {
 }
 
 .btn-new::after {
-  content: '';
+  content: "";
   display: inline-block;
   height: 100%;
   width: 100%;
@@ -303,6 +303,10 @@ li {
 
 /* section */
 
+.section {
+  padding-top: 10px;
+}
+
 .personal-img {
   width: 13rem;
   margin: 0 auto;
@@ -314,6 +318,7 @@ li {
   max-width: 1170px;
 }
 .project-img {
+  padding-top: 20px;
   text-align: center;
 }
 .project-img video {
@@ -337,13 +342,13 @@ li {
     font-size: 1.1rem;
   }
   .text-box {
-  padding-bottom: 10px;
-  margin-left: 260px;
-  margin-right: 260px
-  
-  /* width: 1000px;
+    padding-bottom: 10px;
+    margin-left: 260px;
+    margin-right: 260px;
+
+    /* width: 1000px;
   margin: 0 auto; */
-}
+  }
   .section-center {
     width: 95vw;
   }
@@ -371,6 +376,7 @@ main {
   display: grid;
   grid-template-rows: auto 1fr;
   margin-top: 1rem;
+  padding: 1.2rem;
 }
 .project-content {
   border-bottom-left-radius: var(--radius);
@@ -409,8 +415,9 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--clr-white);
+  background: rgba(255, 255, 255, 0.774);
   box-shadow: var(--light-shadow);
+  z-index: 1200;
 }
 .fixed-nav .links a {
   color: var(--clr-grey-1);
@@ -448,7 +455,9 @@ nav {
   height: 60px;
 }
 .logo:hover {
-  content: url(./logoblue.png);
+  content: url(./logos/logogrey.png);
+  animation: fadeIn 2.5s ease-out;
+  animation-fill-mode: backwards;
 }
 .links-container {
   height: 0;
@@ -608,16 +617,18 @@ footer p {
 /* dropdown */
 
 .dropbtn {
-  padding: 1.3rem 1rem;
+  padding: 1.6rem 1.5rem;
+  border-radius: 1.8rem;
   border: none;
-  text-transform: capitalize;
+  text-transform: uppercase;
+  font-weight: 700;
   font-size: 0.875rem;
   text-decoration: none;
   display: block;
   background: var(--clr-grey-9);
   cursor: pointer;
   transition: var(--transition);
-  letter-spacing: var(--spacing);
+  letter-spacing: .1rem;
   border: none;
 }
 
@@ -627,17 +638,18 @@ footer p {
 }
 
 .dropdown {
-  position: relative;
+  /* position: relative; */
   display: inline-block;
 }
 
 .dropdown-content {
   display: none;
+  border-radius: 1.8rem;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 110px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
 }
 
 .dropdown-content a {
@@ -647,7 +659,9 @@ footer p {
   display: block;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
 
 .dropdown:hover .dropdown-content {
   display: block;
@@ -683,6 +697,57 @@ footer p {
 .animated-fadein {
   animation: fadeIn 2.5s ease-out;
   animation-fill-mode: backwards;
+}
+
+.animated-fadein6 {
+  animation: fadeIn 6s ease-out;
+  animation-fill-mode: backwards;
+}
+
+.animated-fadein10 {
+  animation: fadeInSlow 11s ease-out;
+  animation-fill-mode: backwards;
+}
+
+.animated-fadein16 {
+  animation: fadeInSlow 14s ease-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes fadeInSlow {
+  0% {
+    opacity: 0;
+  }
+  /* 10% {
+    opacity: 0.;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  30% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0.4;
+  } */
+  50% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes bounce {
@@ -744,3 +809,143 @@ footer p {
     opacity: 1;
   }
 }
+
+/* 2023 Update */
+
+.bold-white {
+  color: #fff;
+  font-size: 1.9rem;
+  opacity: 0.2;
+}
+
+.tech-icon {
+  width: 5rem;
+  padding: 5px;
+}
+
+.icon-group {
+  display: flex;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.blink {
+  animation: fade 3000ms infinite;
+  -webkit-animation: fade 3000ms infinite;
+}
+
+.centered {
+  text-align: center;
+  padding: 30px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.grouping {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+div .wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(wave.png);
+  background-size: 1000px 100px;
+}
+div .wave.wave1 {
+  animation: wavey 30s linear infinite;
+  z-index: 1000;
+  opacity: 1;
+  animation-delay: 0s;
+  bottom: 0;
+}
+div .wave.wave2 {
+  animation: wavey2 15s linear infinite;
+  z-index: 999;
+  opacity: 0.5;
+  animation-delay: -5s;
+  bottom: 10px;
+}
+div .wave.wave3 {
+  animation: wavey 30s linear infinite;
+  z-index: 998;
+  opacity: 0.7;
+  animation-delay: -2s;
+  bottom: 15px;
+}
+
+div .wave.wave4 {
+  animation: wavey2 5s linear infinite;
+  z-index: 997;
+  opacity: 0.5;
+  animation-delay: -5s;
+  bottom: 10px;
+}
+
+
+@keyframes wavey
+{
+  0%{
+    background-position-x: 0;
+  }
+  100%{
+    background-position-x: 1000px;
+  }
+}
+
+@keyframes wavey2
+{
+  0%{
+    background-position-x: 0;
+  }
+  100%{
+    background-position-x: -1000px;
+  }
+}
+
+
+
+
+

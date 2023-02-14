@@ -20,9 +20,9 @@
       <nav id="nav" class="reg-nav">
         <div class="nav-center">
           <div class="nav-header">
-            <a href="#"
+            <a href=""
               ><img
-                src="./logowhite.png"
+                src="./logos/logowhite.png"
                 alt="TaylorAwde"
                 class="logo animated-fadein"
                 id="logoImg"
@@ -33,9 +33,9 @@
           </div>
           <div class="links-container">
             <ul class="links">
-              <li>
+              <!-- <li>
                 <a href="#home" class="scroll-link">home</a>
-              </li>
+              </li> -->
               <li>
                 <a href="#projects" class="scroll-link">projects</a>
               </li>
@@ -46,108 +46,90 @@
           </div>
         </div>
       </nav>
-      <div class="banner">
+      <div class="banner grouping">
         <div class="container">
-          <h1 class="animated-left">Welcome to my Portfolio</h1>
-          <p class="animated-right">
-            View some of my projects and learn more about me below
+          <h1 class="animated-fadein6" data-text="Welcome">Welcome</h1>
+          <p class="animated-fadein10">
+            Thanks for stopping by. Check out some of work below
           </p>
-          <a
-            href="#projects"
-            class="scroll-link btn-new btn-new-white animated-up"
-          >
-            Explore projects
+          <a href="#projects" class="scroll-link animated-fadein16 bold-white blink">
+            &#11183;
           </a>
+          <div class="wave wave1"></div>
+      <div class="wave wave2"></div>
+      <div class="wave wave3"></div>
+      <div class="wave wave4"></div>
         </div>
       </div>
     </header>
     <section id="projects" class="section">
       <div class="title">
         <h2 class="animated-left">My <span>Projects</span></h2>
-        <div style="display: flex; justify-content: center">
-          <!-- NEW -->
-
-          <!-- TODO: Dropdown is tied to the side buttons for some reason, disabled for now -->
-          <!-- <div class="dropdown">
-            <button class="dropbtn">
-              Projects
-            </button>
-            <div class="dropdown-content">
-              <a href="" onclick="return false;" class="drop-pick" id="0">Q & A App</a>
-              <a href="" onclick="return false;" class="drop-pick" id="1">Fit Tracker</a>
-              <a href="" onclick="return false;" class="drop-pick" id="2">Infinite Jump</a>
+        <div class="btn-section">
+          <div class="dropdown">
+            <button class="dropbtn">Coding</button>
+            <div id="code-pick" class="dropdown-content">
+              <a href="" onclick="return false;" class="drop-pick" id="0"
+                >React C# Web App</a
+              >
+              <a href="" onclick="return false;" class="drop-pick" id="1"
+                >Android Java App</a
+              >
+              <a href="" onclick="return false;" class="drop-pick" id="2"
+                >Javascript Game</a
+              >
             </div>
-          </div> -->
-          <!-- NEW -->
-          <button class="prev-btn btn-new btn-new-white">
-            <i class="fas fa-chevron-left"></i>
-          </button>
-          <h3 id="proj-Title" class="projTitle">
-            <!-- Dynamically added with JS -->
-          </h3>
-          <button class="next-btn btn-new btn-new-white">
-            <i class="fas fa-chevron-right"></i>
-          </button>
-        </div>
+          </div>
+          <div class="dropdown" style="padding-left: 5px">
+            <button class="dropbtn">Websites</button>
+            <div id="web-pick" class="dropdown-content">
+              <a href="" onclick="return false;" class="drop-pick" id="0"
+                >Salon Boutique</a
+              >
+              <a href="" onclick="return false;" class="drop-pick" id="1"
+                >Industrial Sales</a
+              >
+              <a href="" onclick="return false;" class="drop-pick" id="2"
+                >Portfolio Website</a
+              >
+            </div>
+          </div>
+        </div>       
       </div>
       <div class="project-center section-center">
         <article class="project-img">
-          <video id="proj-Video" autoplay loop muted>
-            <!-- Dynamically added with JS -->
-            <source src="" type="video/mp4" />
+          <video id="proj-Video" autoplay loop muted src="">
+            <source src type="video/mp4" />
           </video>
         </article>
         <article class="project">
-          <!-- btn container -->
-          <div class="btn-container">
-            <button class="tab-btn active" data-id="overview">Overview</button>
-            <button class="tab-btn" data-id="skills">Built With</button>
-            <button class="tab-btn" data-id="github">GitHub</button>
+          <h2 id="proj-Title" class="centered"></h2>
+          <div class="icon-group">
+            <img
+              id="proj-Icon1"
+              alt="icon1"
+              class="tech-icon animated-fadein"
+            />
+            <img
+              id="proj-Icon2"
+              alt="icon2"
+              class="tech-icon animated-fadein"
+            />
+            <img
+              id="proj-Icon3"
+              alt="icon3"
+              class="tech-icon animated-fadein"
+            />
           </div>
-          <article class="project-content">
-            <!-- single item -->
-            <div class="content active" id="overview">
-              <p id="proj-Description">
-                <!-- Dynamically added with JS -->
-              </p>
-              <a
-                href="https://infinite-jumping-game.netlify.app/"
-                class="hide-btn btn-new-white play-btn"
-                >Play it!</a
-              >
-            </div>
-            <!-- end of single item -->
-            <!-- single item -->
-            <div class="content" id="skills">
-              <h4 class="title">Built With</h4>
-              <ul>
-                <li id="proj-Skill1"><!-- Dynamically added with JS --></li>
-                <li id="proj-Skill2"><!-- Dynamically added with JS --></li>
-                <li id="proj-Skill3"><!-- Dynamically added with JS --></li>
-                <li id="proj-Skill4"><!-- Dynamically added with JS --></li>
-                <li id="proj-Skill5"><!-- Dynamically added with JS --></li>
-                <li id="proj-Skill6"><!-- Dynamically added with JS --></li>
-              </ul>
-            </div>
-            <!-- end of single item -->
-            <!-- single item -->
-            <div class="content" id="github">
-              <div class="title">
-                <!-- Dynamically added with JS -->
-                <a
-                  id="proj-GitHub"
-                  href=""
-                  class="btn-new btn-new-white scnBtn"
-                  style="opacity: 0;"
-                >
-                  View on GitHub
-                </a>
-              </div>
-            </div>
-            <!-- end of single item -->
-          </article>
+          <p id="proj-Text" class="centered"></p>
+          <a
+            id="proj-Link"
+            class="align btn-new btn-new-white animated-up hidden"
+            href=""
+            >Visit Project</a
+          >
         </article>
-      </div>
+        </div>
     </section>
     <section id="about" class="section">
       <div class="title">
@@ -157,13 +139,12 @@
         </article>
         <div class="text-box">
           <p>
-            I'm a developer based out of Edmonton Alberta in Canada. I earned a 
-            Digital Media and IT diploma, under the Computer Software Development 
-            Concentration, from The Northern Alberta Institute of Technology. I have
-            professional experience on a React / Javascript, Node.js and mySQL stack 
-            and I've become knowledgeable with other technologies such as C# / .NET, PHP,
-            Java, HTML / CSS and CMS like WordPress. On a personal note, I'm an avid weight 
-            lifter who also enjoys tinkering with old game consoles, rock climbing and reading.
+            I'm a developer based out of Edmonton, Alberta in Canada. I earned a
+            Digital Media and IT diploma, under the Computer Software
+            Development Concentration, from The Northern Alberta Institute of
+            Technology. I have professional experience on a React / Javascript,
+            Node.js and mySQL stack and I'm knowledgeable with other
+            technologies such as C# / .NET, PHP, HTML / CSS and WordPress.
           </p>
         </div>
         <div>
@@ -177,7 +158,7 @@
         <div style="padding: 18px"></div>
       </div>
     </section>
-    <footer class="section">
+    <footer>
       <img src="favicon.png" alt="logo" class="logo-f align" />
       <div style="text-align: center" class="smSpace align">
         <a href="https://www.linkedin.com/in/taylor-awde/"
