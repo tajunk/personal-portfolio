@@ -415,7 +415,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.774);
+  background: rgba(255, 255, 255);
   box-shadow: var(--light-shadow);
   z-index: 1200;
 }
